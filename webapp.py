@@ -15,16 +15,6 @@ st.write("""
 image = Image.open('ai.png')
 st.image(image, caption='ML',use_column_width=True)
 
-#Add and show some data
-#Get the data
-df = pd.read_csv("diabetes.csv")
-st.subheader('Data Information:')
-#Show the data as a table (you can also use st.write(df))
-st.dataframe(df)
-#Get statistics on the data
-st.write(df.describe())
-# Show the data as a chart.
-chart = st.line_chart(df)
 
 #Split the data into independent 'X' and dependent 'Y' variables
 X = df.iloc[:, 0:8].values
